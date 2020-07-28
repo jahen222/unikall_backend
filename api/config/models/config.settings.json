@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "configs",
+  "info": {
+    "name": "Config"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "builder_page": {
+      "type": "boolean"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}
