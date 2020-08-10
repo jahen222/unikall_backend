@@ -58,6 +58,13 @@
     },
     "lastname": {
       "type": "string"
+    },
+    "business": {
+      "model": "business",
+      "via": "user"
+    },
+    "phone": {
+      "type": "string"
     }
   }
 }
