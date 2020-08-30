@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "testimonials",
+  "collectionName": "blogs",
   "info": {
-    "name": "Testimonial"
+    "name": "blog"
   },
   "options": {
     "increments": true,
@@ -10,15 +10,14 @@
   },
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "default": "blog title"
     },
     "description": {
-      "type": "string"
+      "type": "text",
+      "default": "blog description goes here..."
     },
-    "sender": {
-      "type": "string"
-    },
-    "sender_image": {
+    "image": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -30,7 +29,7 @@
       "required": false
     },
     "business": {
-      "via": "testimonials",
+      "via": "blogs",
       "model": "business"
     }
   }

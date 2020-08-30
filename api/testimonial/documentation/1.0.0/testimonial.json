@@ -624,7 +624,19 @@
               "user": {
                 "type": "string"
               },
-              "testimonial": {
+              "testimonials": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "email": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "string"
+              },
+              "blogs": {
                 "type": "array",
                 "items": {
                   "type": "string"
