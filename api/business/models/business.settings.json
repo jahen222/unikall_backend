@@ -44,9 +44,12 @@
       "type": "string"
     },
     "user": {
-      "via": "business",
       "plugin": "users-permissions",
       "model": "user"
+    },
+    "testimonial": {
+      "collection": "testimonial",
+      "via": "business"
     }
   }
 }

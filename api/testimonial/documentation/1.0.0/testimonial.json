@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/businesses": {
+    "/testimonials": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Business"
+                    "$ref": "#/components/schemas/Testimonial"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Business"
+          "Testimonial"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Business"
+                  "$ref": "#/components/schemas/Testimonial"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Business"
+          "Testimonial"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewBusiness"
+                "$ref": "#/components/schemas/NewTestimonial"
               }
             }
           }
         }
       }
     },
-    "/businesses/count": {
+    "/testimonials/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Business"
+          "Testimonial"
         ],
         "parameters": []
       }
     },
-    "/businesses/{id}": {
+    "/testimonials/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Business"
+                  "$ref": "#/components/schemas/Testimonial"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Business"
+          "Testimonial"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Business"
+                  "$ref": "#/components/schemas/Testimonial"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Business"
+          "Testimonial"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewBusiness"
+                "$ref": "#/components/schemas/NewTestimonial"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Business"
+          "Testimonial"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Business": {
+      "Testimonial": {
         "required": [
           "id"
         ],
@@ -522,10 +522,16 @@
           "id": {
             "type": "string"
           },
-          "name": {
+          "title": {
             "type": "string"
           },
-          "logo": {
+          "description": {
+            "type": "string"
+          },
+          "sender": {
+            "type": "string"
+          },
+          "sender_image": {
             "required": [
               "id",
               "name",
@@ -586,147 +592,41 @@
               }
             }
           },
-          "tagline": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "work_images": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "alternativeText": {
-                  "type": "string"
-                },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "address": {
-            "type": "string"
-          },
-          "user": {
+          "business": {
             "required": [
-              "id",
-              "username",
-              "email"
+              "id"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
               "name": {
                 "type": "string"
               },
-              "lastname": {
+              "logo": {
                 "type": "string"
               },
-              "phone": {
+              "tagline": {
                 "type": "string"
-              }
-            }
-          },
-          "testimonial": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
+              },
+              "description": {
+                "type": "string"
+              },
+              "work_images": {
+                "type": "array",
+                "items": {
                   "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "sender": {
-                  "type": "string"
-                },
-                "sender_image": {
-                  "type": "string"
-                },
-                "business": {
+                }
+              },
+              "address": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "testimonial": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
               }
@@ -734,28 +634,19 @@
           }
         }
       },
-      "NewBusiness": {
+      "NewTestimonial": {
         "properties": {
-          "name": {
-            "type": "string"
-          },
-          "tagline": {
+          "title": {
             "type": "string"
           },
           "description": {
             "type": "string"
           },
-          "address": {
+          "sender": {
             "type": "string"
           },
-          "user": {
+          "business": {
             "type": "string"
-          },
-          "testimonial": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           }
         }
       }
@@ -763,7 +654,7 @@
   },
   "tags": [
     {
-      "name": "Business"
+      "name": "Testimonial"
     }
   ]
 }
