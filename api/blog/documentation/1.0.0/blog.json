@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/businesses": {
+    "/blogs": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Business"
+                    "$ref": "#/components/schemas/Blog"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Business"
+          "Blog"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Business"
+                  "$ref": "#/components/schemas/Blog"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Business"
+          "Blog"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewBusiness"
+                "$ref": "#/components/schemas/NewBlog"
               }
             }
           }
         }
       }
     },
-    "/businesses/count": {
+    "/blogs/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Business"
+          "Blog"
         ],
         "parameters": []
       }
     },
-    "/businesses/{id}": {
+    "/blogs/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Business"
+                  "$ref": "#/components/schemas/Blog"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Business"
+          "Blog"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Business"
+                  "$ref": "#/components/schemas/Blog"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Business"
+          "Blog"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewBusiness"
+                "$ref": "#/components/schemas/NewBlog"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Business"
+          "Blog"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Business": {
+      "Blog": {
         "required": [
           "id"
         ],
@@ -522,11 +522,15 @@
           "id": {
             "type": "string"
           },
-          "name": {
+          "title": {
             "type": "string",
-            "default": "Business"
+            "default": "blog title"
           },
-          "logo": {
+          "description": {
+            "type": "string",
+            "default": "blog description goes here..."
+          },
+          "image": {
             "required": [
               "id",
               "name",
@@ -587,183 +591,53 @@
               }
             }
           },
-          "tagline": {
-            "type": "string",
-            "default": "Your tagline goes here"
-          },
-          "description": {
-            "type": "string",
-            "default": "Your text goes here ...."
-          },
-          "work_images": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "alternativeText": {
-                  "type": "string"
-                },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "address": {
-            "type": "string",
-            "default": "Addresss goes here"
-          },
-          "user": {
+          "business": {
             "required": [
-              "id",
-              "username",
-              "email"
+              "id"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "username": {
+              "name": {
                 "type": "string"
+              },
+              "logo": {
+                "type": "string"
+              },
+              "tagline": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "work_images": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "address": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "testimonials": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "email": {
                 "type": "string"
               },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "lastname": {
-                "type": "string"
-              },
               "phone": {
                 "type": "string"
-              }
-            }
-          },
-          "testimonials": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "sender": {
-                  "type": "string"
-                },
-                "sender_image": {
-                  "type": "string"
-                },
-                "business": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "email": {
-            "type": "string",
-            "default": "test@server.com"
-          },
-          "phone": {
-            "type": "string",
-            "default": "1231231234"
-          },
-          "blogs": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "image": {
-                  "type": "string"
-                },
-                "business": {
+              },
+              "blogs": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
               }
@@ -771,46 +645,18 @@
           }
         }
       },
-      "NewBusiness": {
+      "NewBlog": {
         "properties": {
-          "name": {
+          "title": {
             "type": "string",
-            "default": "Business"
-          },
-          "tagline": {
-            "type": "string",
-            "default": "Your tagline goes here"
+            "default": "blog title"
           },
           "description": {
             "type": "string",
-            "default": "Your text goes here ...."
+            "default": "blog description goes here..."
           },
-          "address": {
-            "type": "string",
-            "default": "Addresss goes here"
-          },
-          "user": {
+          "business": {
             "type": "string"
-          },
-          "testimonials": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "email": {
-            "type": "string",
-            "default": "test@server.com"
-          },
-          "phone": {
-            "type": "string",
-            "default": "1231231234"
-          },
-          "blogs": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           }
         }
       }
@@ -818,7 +664,7 @@
   },
   "tags": [
     {
-      "name": "Business"
+      "name": "Blog"
     }
   ]
 }

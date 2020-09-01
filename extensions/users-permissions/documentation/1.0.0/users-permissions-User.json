@@ -1251,40 +1251,6 @@
           "lastname": {
             "type": "string"
           },
-          "business": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "logo": {
-                "type": "string"
-              },
-              "tagline": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "work_images": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "address": {
-                "type": "string"
-              },
-              "user": {
-                "type": "string"
-              }
-            }
-          },
           "phone": {
             "type": "string"
           }
@@ -1329,9 +1295,6 @@
             "type": "string"
           },
           "lastname": {
-            "type": "string"
-          },
-          "business": {
             "type": "string"
           },
           "phone": {

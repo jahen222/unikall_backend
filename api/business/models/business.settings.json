@@ -10,7 +10,8 @@
   },
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "default": "Business"
     },
     "logo": {
       "model": "file",
@@ -24,10 +25,12 @@
       "required": false
     },
     "tagline": {
-      "type": "string"
+      "type": "string",
+      "default": "Your tagline goes here"
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "default": "Your text goes here ...."
     },
     "work_images": {
       "collection": "file",
@@ -41,12 +44,28 @@
       "required": false
     },
     "address": {
-      "type": "string"
+      "type": "string",
+      "default": "Addresss goes here"
     },
     "user": {
-      "via": "business",
       "plugin": "users-permissions",
       "model": "user"
+    },
+    "testimonials": {
+      "collection": "testimonial",
+      "via": "business"
+    },
+    "email": {
+      "type": "string",
+      "default": "test@server.com"
+    },
+    "phone": {
+      "type": "string",
+      "default": "1231231234"
+    },
+    "blogs": {
+      "collection": "blog",
+      "via": "business"
     }
   }
 }
