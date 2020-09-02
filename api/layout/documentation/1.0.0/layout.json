@@ -646,12 +646,43 @@
                 "type": "string"
               }
             }
+          },
+          "category": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "subcategories": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "icon": {
+                "type": "string"
+              },
+              "layouts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
       "NewLayout": {
         "properties": {
           "name": {
+            "type": "string"
+          },
+          "category": {
             "type": "string"
           }
         }

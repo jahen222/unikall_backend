@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "08/30/2020 6:23:04 PM"
+    "x-generation-date": "09/01/2020 10:55:52 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -6859,6 +6859,34 @@
                 }
               }
             }
+          },
+          "icon": {
+            "type": "string"
+          },
+          "layouts": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "preview": {
+                  "type": "string"
+                },
+                "mockup": {
+                  "type": "string"
+                },
+                "category": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -6868,6 +6896,15 @@
             "type": "string"
           },
           "subcategories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "icon": {
+            "type": "string"
+          },
+          "layouts": {
             "type": "array",
             "items": {
               "type": "string"
@@ -7033,12 +7070,43 @@
                 "type": "string"
               }
             }
+          },
+          "category": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "subcategories": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "icon": {
+                "type": "string"
+              },
+              "layouts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
       "NewLayout": {
         "properties": {
           "name": {
+            "type": "string"
+          },
+          "category": {
             "type": "string"
           }
         }
@@ -7066,6 +7134,15 @@
                 "type": "string"
               },
               "subcategories": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "icon": {
+                "type": "string"
+              },
+              "layouts": {
                 "type": "array",
                 "items": {
                   "type": "string"

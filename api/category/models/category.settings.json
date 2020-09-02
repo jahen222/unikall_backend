@@ -15,6 +15,13 @@
     "subcategories": {
       "collection": "subcategory",
       "via": "category"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "layouts": {
+      "via": "category",
+      "collection": "layout"
     }
   }
 }
