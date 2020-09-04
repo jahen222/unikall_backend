@@ -543,6 +543,34 @@
                 }
               }
             }
+          },
+          "icon": {
+            "type": "string"
+          },
+          "layouts": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "preview": {
+                  "type": "string"
+                },
+                "mockup": {
+                  "type": "string"
+                },
+                "category": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -552,6 +580,15 @@
             "type": "string"
           },
           "subcategories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "icon": {
+            "type": "string"
+          },
+          "layouts": {
             "type": "array",
             "items": {
               "type": "string"

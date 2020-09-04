@@ -541,6 +541,15 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "icon": {
+                "type": "string"
+              },
+              "layouts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           }

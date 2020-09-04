@@ -33,6 +33,10 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "category": {
+      "model": "category",
+      "via": "layouts"
     }
   }
 }
