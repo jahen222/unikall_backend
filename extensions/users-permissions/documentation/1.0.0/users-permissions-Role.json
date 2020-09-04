@@ -635,6 +635,9 @@
                 },
                 "business": {
                   "type": "string"
+                },
+                "layout": {
+                  "type": "string"
                 }
               }
             }

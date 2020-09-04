@@ -1393,6 +1393,28 @@
                 "type": "number"
               }
             }
+          },
+          "layout": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "preview": {
+                "type": "string"
+              },
+              "mockup": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -1453,6 +1475,9 @@
             "type": "string"
           },
           "business": {
+            "type": "string"
+          },
+          "layout": {
             "type": "string"
           }
         }

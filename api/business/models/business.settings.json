@@ -48,9 +48,9 @@
       "default": "Addresss goes here"
     },
     "user": {
+      "via": "business",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "business"
+      "model": "user"
     },
     "testimonials": {
       "collection": "testimonial",

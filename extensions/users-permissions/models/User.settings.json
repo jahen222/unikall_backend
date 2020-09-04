@@ -86,8 +86,11 @@
       "required": false
     },
     "business": {
-      "via": "user",
-      "model": "business"
+      "model": "business",
+      "via": "user"
+    },
+    "layout": {
+      "model": "layout"
     }
   }
 }
