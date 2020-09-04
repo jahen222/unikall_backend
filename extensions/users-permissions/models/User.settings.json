@@ -53,14 +53,41 @@
       "plugin": "users-permissions",
       "configurable": false
     },
-    "name": {
-      "type": "string"
-    },
-    "lastname": {
+    "fullname": {
       "type": "string"
     },
     "phone": {
       "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "zip": {
+      "type": "integer"
+    },
+    "country": {
+      "type": "string"
+    },
+    "avatar": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "business": {
+      "via": "user",
+      "model": "business"
     }
   }
 }

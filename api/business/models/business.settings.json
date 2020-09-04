@@ -43,13 +43,14 @@
       "plugin": "upload",
       "required": false
     },
-    "address": {
+    "address1": {
       "type": "string",
       "default": "Addresss goes here"
     },
     "user": {
       "plugin": "users-permissions",
-      "model": "user"
+      "model": "user",
+      "via": "business"
     },
     "testimonials": {
       "collection": "testimonial",
@@ -66,6 +67,21 @@
     "blogs": {
       "collection": "blog",
       "via": "business"
+    },
+    "address2": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "zip": {
+      "type": "decimal"
     }
   }
 }
