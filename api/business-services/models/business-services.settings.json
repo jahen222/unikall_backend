@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "business_services",
+  "info": {
+    "name": "Business Services"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

@@ -655,6 +655,9 @@
               },
               "zip": {
                 "type": "number"
+              },
+              "business_services": {
+                "type": "string"
               }
             }
           }

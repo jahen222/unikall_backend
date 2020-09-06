@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/business-services",
+      "handler": "business-services.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/business-services/count",
+      "handler": "business-services.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/business-services/:id",
+      "handler": "business-services.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/business-services",
+      "handler": "business-services.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/business-services/:id",
+      "handler": "business-services.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/business-services/:id",
+      "handler": "business-services.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

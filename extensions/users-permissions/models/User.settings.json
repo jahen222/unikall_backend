@@ -86,8 +86,8 @@
       "required": false
     },
     "business": {
-      "model": "business",
-      "via": "user"
+      "via": "user",
+      "model": "business"
     },
     "layout": {
       "model": "layout"

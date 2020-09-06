@@ -48,9 +48,9 @@
       "default": "Addresss goes here"
     },
     "user": {
-      "via": "business",
       "plugin": "users-permissions",
-      "model": "user"
+      "model": "user",
+      "via": "business"
     },
     "testimonials": {
       "collection": "testimonial",
@@ -82,6 +82,9 @@
     },
     "zip": {
       "type": "decimal"
+    },
+    "business_services": {
+      "collection": "business-services"
     }
   }
 }
