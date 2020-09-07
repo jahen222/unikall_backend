@@ -1394,6 +1394,12 @@
               },
               "business_services": {
                 "type": "string"
+              },
+              "allies": {
+                "type": "string"
+              },
+              "ally": {
+                "type": "string"
               }
             }
           },

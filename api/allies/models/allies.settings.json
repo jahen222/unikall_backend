@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "allies",
+  "info": {
+    "name": "Allies"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "logo": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "business": {
+      "model": "business",
+      "via": "ally"
+    }
+  }
+}

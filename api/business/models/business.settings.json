@@ -85,6 +85,13 @@
     },
     "business_services": {
       "collection": "business-services"
+    },
+    "allies": {
+      "collection": "allies"
+    },
+    "ally": {
+      "via": "business",
+      "model": "allies"
     }
   }
 }

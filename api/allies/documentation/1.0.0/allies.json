@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/businesses": {
+    "/allies": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the allies's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve allies document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Business"
+                    "$ref": "#/components/schemas/Allies"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Business"
+          "Allies"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new allies record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve allies document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Business"
+                  "$ref": "#/components/schemas/Allies"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Business"
+          "Allies"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewBusiness"
+                "$ref": "#/components/schemas/NewAllies"
               }
             }
           }
         }
       }
     },
-    "/businesses/count": {
+    "/allies/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of allies documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve allies document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Business"
+          "Allies"
         ],
         "parameters": []
       }
     },
-    "/businesses/{id}": {
+    "/allies/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one allies record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve allies document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Business"
+                  "$ref": "#/components/schemas/Allies"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Business"
+          "Allies"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single allies record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve allies document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Business"
+                  "$ref": "#/components/schemas/Allies"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Business"
+          "Allies"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewBusiness"
+                "$ref": "#/components/schemas/NewAllies"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single allies record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single allies based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Business"
+          "Allies"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Business": {
+      "Allies": {
         "required": [
           "id"
         ],
@@ -522,80 +522,7 @@
           "id": {
             "type": "string"
           },
-          "name": {
-            "type": "string",
-            "default": "Business"
-          },
           "logo": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              }
-            }
-          },
-          "tagline": {
-            "type": "string",
-            "default": "Your tagline goes here"
-          },
-          "description": {
-            "type": "string",
-            "default": "Your text goes here ...."
-          },
-          "work_images": {
             "type": "array",
             "items": {
               "required": [
@@ -659,277 +586,87 @@
               }
             }
           },
-          "address1": {
-            "type": "string",
-            "default": "Addresss goes here"
-          },
-          "user": {
+          "business": {
             "required": [
-              "id",
-              "username",
-              "email"
+              "id"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "username": {
+              "name": {
                 "type": "string"
+              },
+              "logo": {
+                "type": "string"
+              },
+              "tagline": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "work_images": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "address1": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "testimonials": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "fullname": {
                 "type": "string"
               },
               "phone": {
                 "type": "string"
               },
-              "address": {
+              "blogs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "address2": {
                 "type": "string"
               },
               "city": {
+                "type": "string"
+              },
+              "country": {
                 "type": "string"
               },
               "state": {
                 "type": "string"
               },
               "zip": {
-                "type": "integer"
+                "type": "number"
               },
-              "country": {
+              "business_services": {
                 "type": "string"
               },
-              "avatar": {
+              "allies": {
                 "type": "string"
               },
-              "business": {
-                "type": "string"
-              },
-              "layout": {
-                "type": "string"
-              }
-            }
-          },
-          "testimonials": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "sender": {
-                  "type": "string"
-                },
-                "sender_image": {
-                  "type": "string"
-                },
-                "business": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "email": {
-            "type": "string",
-            "default": "test@server.com"
-          },
-          "phone": {
-            "type": "string",
-            "default": "1231231234"
-          },
-          "blogs": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "image": {
-                  "type": "string"
-                },
-                "business": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "address2": {
-            "type": "string"
-          },
-          "city": {
-            "type": "string"
-          },
-          "country": {
-            "type": "string"
-          },
-          "state": {
-            "type": "string"
-          },
-          "zip": {
-            "type": "number"
-          },
-          "business_services": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "icon": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "business": {
-                "type": "string"
-              }
-            }
-          },
-          "allies": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "logo": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "business": {
-                "type": "string"
-              }
-            }
-          },
-          "ally": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "logo": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "business": {
+              "ally": {
                 "type": "string"
               }
             }
           }
         }
       },
-      "NewBusiness": {
+      "NewAllies": {
         "properties": {
-          "name": {
-            "type": "string",
-            "default": "Business"
-          },
-          "tagline": {
-            "type": "string",
-            "default": "Your tagline goes here"
-          },
-          "description": {
-            "type": "string",
-            "default": "Your text goes here ...."
-          },
-          "address1": {
-            "type": "string",
-            "default": "Addresss goes here"
-          },
-          "user": {
-            "type": "string"
-          },
-          "testimonials": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "email": {
-            "type": "string",
-            "default": "test@server.com"
-          },
-          "phone": {
-            "type": "string",
-            "default": "1231231234"
-          },
-          "blogs": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "address2": {
-            "type": "string"
-          },
-          "city": {
-            "type": "string"
-          },
-          "country": {
-            "type": "string"
-          },
-          "state": {
-            "type": "string"
-          },
-          "zip": {
-            "type": "number"
-          },
-          "business_services": {
-            "type": "string"
-          },
-          "allies": {
-            "type": "string"
-          },
-          "ally": {
+          "business": {
             "type": "string"
           }
         }
@@ -938,7 +675,7 @@
   },
   "tags": [
     {
-      "name": "Business"
+      "name": "Allies"
     }
   ]
 }
