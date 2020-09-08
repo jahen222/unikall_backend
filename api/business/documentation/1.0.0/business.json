@@ -864,6 +864,46 @@
                 "type": "string"
               }
             }
+          },
+          "products": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "price": {
+                  "type": "number"
+                },
+                "photos": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "quantity": {
+                  "type": "integer"
+                },
+                "status": {
+                  "type": "boolean"
+                },
+                "business": {
+                  "type": "string"
+                },
+                "product_subcategory": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -931,6 +971,12 @@
           },
           "ally": {
             "type": "string"
+          },
+          "products": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }

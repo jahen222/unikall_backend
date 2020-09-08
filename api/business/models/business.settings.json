@@ -92,6 +92,10 @@
     "ally": {
       "via": "business",
       "model": "allies"
+    },
+    "products": {
+      "via": "business",
+      "collection": "product"
     }
   }
 }

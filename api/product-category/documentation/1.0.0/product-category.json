@@ -1,18 +1,19 @@
 {
   "paths": {
-    "/allies": {
+    "/product-categories": {
       "get": {
         "deprecated": false,
-        "description": "Find all the allies's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve allies document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Allies"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Allies"
+          "Product-category"
         ],
         "parameters": [
           {
@@ -194,79 +195,16 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new allies record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve allies document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Allies"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Allies"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewAllies"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/allies/count": {
-      "get": {
-        "deprecated": false,
-        "description": "Retrieve the numver of allies documents",
-        "responses": {
-          "200": {
-            "description": "Retrieve allies document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -306,22 +244,36 @@
         },
         "summary": "",
         "tags": [
-          "Allies"
+          "Product-category"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewProduct-category"
+              }
+            }
+          }
+        }
       }
     },
-    "/allies/{id}": {
+    "/product-categories/count": {
       "get": {
         "deprecated": false,
-        "description": "Find one allies record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve allies document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Allies"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -359,7 +311,64 @@
         },
         "summary": "",
         "tags": [
-          "Allies"
+          "Product-category"
+        ],
+        "parameters": []
+      }
+    },
+    "/product-categories/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Product-category"
         ],
         "parameters": [
           {
@@ -376,14 +385,18 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single allies record",
+        "description": "Update a record",
         "responses": {
           "200": {
-            "description": "Retrieve allies document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Allies"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -421,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Allies"
+          "Product-category"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewAllies"
+                "$ref": "#/components/schemas/NewProduct-category"
               }
             }
           }
@@ -449,10 +462,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single allies record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single allies based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Allies"
+          "Product-category"
         ],
         "parameters": [
           {
@@ -514,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "Allies": {
+      "Product-category": {
         "required": [
           "id"
         ],
@@ -522,17 +535,14 @@
           "id": {
             "type": "string"
           },
-          "logo": {
+          "name": {
+            "type": "string"
+          },
+          "product_subcategories": {
             "type": "array",
             "items": {
               "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
+                "id"
               ],
               "properties": {
                 "id": {
@@ -541,147 +551,34 @@
                 "name": {
                   "type": "string"
                 },
-                "alternativeText": {
+                "product_category": {
                   "type": "string"
                 },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "business": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "logo": {
-                "type": "string"
-              },
-              "tagline": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "work_images": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "address1": {
-                "type": "string"
-              },
-              "user": {
-                "type": "string"
-              },
-              "testimonials": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "email": {
-                "type": "string"
-              },
-              "phone": {
-                "type": "string"
-              },
-              "blogs": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "address2": {
-                "type": "string"
-              },
-              "city": {
-                "type": "string"
-              },
-              "country": {
-                "type": "string"
-              },
-              "state": {
-                "type": "string"
-              },
-              "zip": {
-                "type": "number"
-              },
-              "business_services": {
-                "type": "string"
-              },
-              "allies": {
-                "type": "string"
-              },
-              "ally": {
-                "type": "string"
-              },
-              "products": {
-                "type": "array",
-                "items": {
-                  "type": "string"
+                "products": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
           }
         }
       },
-      "NewAllies": {
+      "NewProduct-category": {
         "properties": {
-          "business": {
+          "name": {
             "type": "string"
+          },
+          "product_subcategories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }
     }
   },
-  "tags": [
-    {
-      "name": "Allies"
-    }
-  ]
+  "tags": []
 }

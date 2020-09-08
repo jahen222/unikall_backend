@@ -617,6 +617,12 @@
               },
               "ally": {
                 "type": "string"
+              },
+              "products": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           }
