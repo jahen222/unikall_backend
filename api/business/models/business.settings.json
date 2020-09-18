@@ -84,18 +84,19 @@
       "type": "decimal"
     },
     "business_services": {
-      "collection": "business-services"
+      "collection": "business-services",
+      "via": "business"
     },
     "allies": {
       "collection": "allies"
     },
     "ally": {
-      "via": "business",
-      "model": "allies"
+      "model": "allies",
+      "via": "business"
     },
     "products": {
-      "via": "business",
-      "collection": "product"
+      "collection": "product",
+      "via": "business"
     }
   }
 }

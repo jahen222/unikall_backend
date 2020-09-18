@@ -21,8 +21,8 @@
       "required": false
     },
     "business": {
-      "model": "business",
-      "via": "ally"
+      "via": "ally",
+      "model": "business"
     }
   }
 }

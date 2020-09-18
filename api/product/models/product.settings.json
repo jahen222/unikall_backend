@@ -36,8 +36,8 @@
       "type": "boolean"
     },
     "business": {
-      "model": "business",
-      "via": "products"
+      "via": "products",
+      "model": "business"
     },
     "product_subcategory": {
       "model": "product-subcategory",

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "09/07/2020 8:32:58 PM"
+    "x-generation-date": "09/18/2020 4:03:35 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -9023,7 +9023,10 @@
                 "type": "number"
               },
               "business_services": {
-                "type": "string"
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "allies": {
                 "type": "string"
@@ -9284,7 +9287,10 @@
                 "type": "number"
               },
               "business_services": {
-                "type": "string"
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "allies": {
                 "type": "string"
@@ -9333,6 +9339,67 @@
           },
           "description": {
             "type": "string"
+          },
+          "image": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              }
+            }
           },
           "business": {
             "required": [
@@ -9400,7 +9467,10 @@
                 "type": "number"
               },
               "business_services": {
-                "type": "string"
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "allies": {
                 "type": "string"
@@ -9726,24 +9796,30 @@
             "type": "number"
           },
           "business_services": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "icon": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "business": {
-                "type": "string"
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "string"
+                },
+                "business": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -9884,7 +9960,10 @@
             "type": "number"
           },
           "business_services": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "allies": {
             "type": "string"
@@ -10473,7 +10552,10 @@
                 "type": "number"
               },
               "business_services": {
-                "type": "string"
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "allies": {
                 "type": "string"
@@ -10733,7 +10815,10 @@
                 "type": "number"
               },
               "business_services": {
-                "type": "string"
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "allies": {
                 "type": "string"
@@ -11130,7 +11215,10 @@
                 "type": "number"
               },
               "business_services": {
-                "type": "string"
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "allies": {
                 "type": "string"
