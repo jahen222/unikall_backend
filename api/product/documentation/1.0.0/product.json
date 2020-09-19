@@ -667,7 +667,10 @@
                 "type": "number"
               },
               "business_services": {
-                "type": "string"
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "allies": {
                 "type": "string"

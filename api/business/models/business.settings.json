@@ -84,7 +84,8 @@
       "type": "decimal"
     },
     "business_services": {
-      "collection": "business-services"
+      "collection": "business-services",
+      "via": "business"
     },
     "allies": {
       "collection": "allies"
