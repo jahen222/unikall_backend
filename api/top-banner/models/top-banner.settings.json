@@ -1,16 +1,16 @@
 {
   "kind": "collectionType",
-  "collectionName": "allies",
+  "collectionName": "top_banners",
   "info": {
-    "name": "Allies"
+    "name": "top banner"
   },
   "options": {
     "increments": true,
     "timestamps": true
   },
   "attributes": {
-    "logo": {
-      "collection": "file",
+    "topbannerimage": {
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -21,7 +21,6 @@
       "required": false
     },
     "business": {
-      "via": "ally",
       "model": "business"
     }
   }

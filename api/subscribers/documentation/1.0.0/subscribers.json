@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/products": {
+    "/subscribers": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the subscribers's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve subscribers document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Product"
+                    "$ref": "#/components/schemas/Subscribers"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Product"
+          "Subscribers"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new subscribers record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve subscribers document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Product"
+                  "$ref": "#/components/schemas/Subscribers"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Product"
+          "Subscribers"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProduct"
+                "$ref": "#/components/schemas/NewSubscribers"
               }
             }
           }
         }
       }
     },
-    "/products/count": {
+    "/subscribers/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of subscribers documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve subscribers document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Product"
+          "Subscribers"
         ],
         "parameters": []
       }
     },
-    "/products/{id}": {
+    "/subscribers/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one subscribers record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve subscribers document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Product"
+                  "$ref": "#/components/schemas/Subscribers"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Product"
+          "Subscribers"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single subscribers record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve subscribers document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Product"
+                  "$ref": "#/components/schemas/Subscribers"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Product"
+          "Subscribers"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProduct"
+                "$ref": "#/components/schemas/NewSubscribers"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single subscribers record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single subscribers based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Product"
+          "Subscribers"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Product": {
+      "Subscribers": {
         "required": [
           "id"
         ],
@@ -522,224 +522,15 @@
           "id": {
             "type": "string"
           },
-          "name": {
+          "subscriber_email": {
             "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "price": {
-            "type": "number"
-          },
-          "photos": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "alternativeText": {
-                  "type": "string"
-                },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "quantity": {
-            "type": "integer"
-          },
-          "status": {
-            "type": "boolean"
-          },
-          "business": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "logo": {
-                "type": "string"
-              },
-              "tagline": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "work_images": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "address1": {
-                "type": "string"
-              },
-              "user": {
-                "type": "string"
-              },
-              "testimonials": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "email": {
-                "type": "string"
-              },
-              "phone": {
-                "type": "string"
-              },
-              "blogs": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "address2": {
-                "type": "string"
-              },
-              "city": {
-                "type": "string"
-              },
-              "country": {
-                "type": "string"
-              },
-              "state": {
-                "type": "string"
-              },
-              "zip": {
-                "type": "number"
-              },
-              "business_services": {
-                "type": "string"
-              },
-              "allies": {
-                "type": "string"
-              },
-              "ally": {
-                "type": "string"
-              },
-              "products": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "top_banners": {
-                "type": "string"
-              }
-            }
-          },
-          "product_subcategory": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "product_category": {
-                "type": "string"
-              },
-              "products": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "featured": {
-            "type": "boolean",
-            "default": false
           }
         }
       },
-      "NewProduct": {
+      "NewSubscribers": {
         "properties": {
-          "name": {
+          "subscriber_email": {
             "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "price": {
-            "type": "number"
-          },
-          "quantity": {
-            "type": "integer"
-          },
-          "status": {
-            "type": "boolean"
-          },
-          "business": {
-            "type": "string"
-          },
-          "product_subcategory": {
-            "type": "string"
-          },
-          "featured": {
-            "type": "boolean",
-            "default": false
           }
         }
       }
@@ -747,7 +538,7 @@
   },
   "tags": [
     {
-      "name": "Product"
+      "name": "Subscribers"
     }
   ]
 }

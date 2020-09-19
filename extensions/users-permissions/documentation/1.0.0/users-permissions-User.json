@@ -1406,6 +1406,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "top_banners": {
+                "type": "string"
               }
             }
           },

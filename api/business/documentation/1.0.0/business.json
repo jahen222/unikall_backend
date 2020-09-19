@@ -901,7 +901,26 @@
                 },
                 "product_subcategory": {
                   "type": "string"
+                },
+                "featured": {
+                  "type": "boolean"
                 }
+              }
+            }
+          },
+          "top_banners": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "topbannerimage": {
+                "type": "string"
+              },
+              "business": {
+                "type": "string"
               }
             }
           }
@@ -977,6 +996,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "top_banners": {
+            "type": "string"
           }
         }
       }

@@ -593,6 +593,9 @@
                 },
                 "product_subcategory": {
                   "type": "string"
+                },
+                "featured": {
+                  "type": "boolean"
                 }
               }
             }
