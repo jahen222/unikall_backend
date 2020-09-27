@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "09/23/2020 1:50:21 AM"
+    "x-generation-date": "09/28/2020 12:41:49 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -12994,12 +12994,103 @@
           },
           "subscriber_email": {
             "type": "string"
+          },
+          "business": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "logo": {
+                "type": "string"
+              },
+              "tagline": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "work_images": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "address1": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "testimonials": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "email": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "string"
+              },
+              "blogs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "address2": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "country": {
+                "type": "string"
+              },
+              "state": {
+                "type": "string"
+              },
+              "zip": {
+                "type": "number"
+              },
+              "business_services": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "allies": {
+                "type": "string"
+              },
+              "ally": {
+                "type": "string"
+              },
+              "products": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "top_banners": {
+                "type": "string"
+              }
+            }
           }
         }
       },
       "NewSubscribers": {
         "properties": {
           "subscriber_email": {
+            "type": "string"
+          },
+          "business": {
             "type": "string"
           }
         }

@@ -11,6 +11,9 @@
   "attributes": {
     "subscriber_email": {
       "type": "email"
+    },
+    "business": {
+      "model": "business"
     }
   }
 }
