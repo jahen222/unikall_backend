@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "name": "order"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "contact_information": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "shipping_address": {
+      "type": "string"
+    },
+    "total": {
+      "type": "float"
+    },
+    "subtotal": {
+      "type": "float"
+    },
+    "discount": {
+      "type": "decimal"
+    },
+    "paid": {
+      "type": "boolean",
+      "default": false
+    },
+    "order_item": {
+      "via": "order",
+      "model": "order-item"
+    }
+  }
+}

@@ -1,18 +1,19 @@
 {
   "paths": {
-    "/subscribers": {
+    "/order-items": {
       "get": {
         "deprecated": false,
-        "description": "Find all the subscribers's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve subscribers document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Subscribers"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Subscribers"
+          "Order-item"
         ],
         "parameters": [
           {
@@ -194,79 +195,16 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new subscribers record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve subscribers document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Subscribers"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Subscribers"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewSubscribers"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/subscribers/count": {
-      "get": {
-        "deprecated": false,
-        "description": "Retrieve the numver of subscribers documents",
-        "responses": {
-          "200": {
-            "description": "Retrieve subscribers document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -306,22 +244,36 @@
         },
         "summary": "",
         "tags": [
-          "Subscribers"
+          "Order-item"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewOrder-item"
+              }
+            }
+          }
+        }
       }
     },
-    "/subscribers/{id}": {
+    "/order-items/count": {
       "get": {
         "deprecated": false,
-        "description": "Find one subscribers record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve subscribers document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Subscribers"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -359,7 +311,64 @@
         },
         "summary": "",
         "tags": [
-          "Subscribers"
+          "Order-item"
+        ],
+        "parameters": []
+      }
+    },
+    "/order-items/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Order-item"
         ],
         "parameters": [
           {
@@ -376,14 +385,18 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single subscribers record",
+        "description": "Update a record",
         "responses": {
           "200": {
-            "description": "Retrieve subscribers document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Subscribers"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -421,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Subscribers"
+          "Order-item"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewSubscribers"
+                "$ref": "#/components/schemas/NewOrder-item"
               }
             }
           }
@@ -449,10 +462,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single subscribers record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single subscribers based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Subscribers"
+          "Order-item"
         ],
         "parameters": [
           {
@@ -514,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "Subscribers": {
+      "Order-item": {
         "required": [
           "id"
         ],
@@ -522,10 +535,10 @@
           "id": {
             "type": "string"
           },
-          "subscriber_email": {
+          "name": {
             "type": "string"
           },
-          "business": {
+          "product": {
             "required": [
               "id"
             ],
@@ -536,100 +549,97 @@
               "name": {
                 "type": "string"
               },
-              "logo": {
-                "type": "string"
-              },
-              "tagline": {
-                "type": "string"
-              },
               "description": {
                 "type": "string"
               },
-              "work_images": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "address1": {
-                "type": "string"
-              },
-              "user": {
-                "type": "string"
-              },
-              "testimonials": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "email": {
-                "type": "string"
-              },
-              "phone": {
-                "type": "string"
-              },
-              "blogs": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "address2": {
-                "type": "string"
-              },
-              "city": {
-                "type": "string"
-              },
-              "country": {
-                "type": "string"
-              },
-              "state": {
-                "type": "string"
-              },
-              "zip": {
+              "price": {
                 "type": "number"
               },
-              "business_services": {
+              "photos": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "allies": {
+              "quantity": {
+                "type": "integer"
+              },
+              "status": {
+                "type": "boolean"
+              },
+              "business": {
                 "type": "string"
               },
-              "ally": {
+              "product_subcategory": {
                 "type": "string"
               },
-              "products": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "featured": {
+                "type": "boolean"
+              }
+            }
+          },
+          "order": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
               },
-              "top_banners": {
+              "contact_information": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "shipping_address": {
+                "type": "string"
+              },
+              "total": {
+                "type": "number"
+              },
+              "subtotal": {
+                "type": "number"
+              },
+              "discount": {
+                "type": "number"
+              },
+              "paid": {
+                "type": "boolean"
+              },
+              "order_item": {
                 "type": "string"
               }
             }
+          },
+          "price": {
+            "type": "number"
+          },
+          "quantity": {
+            "type": "integer"
           }
         }
       },
-      "NewSubscribers": {
+      "NewOrder-item": {
         "properties": {
-          "subscriber_email": {
+          "name": {
             "type": "string"
           },
-          "business": {
+          "product": {
             "type": "string"
+          },
+          "order": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "quantity": {
+            "type": "integer"
           }
         }
       }
     }
   },
-  "tags": [
-    {
-      "name": "Subscribers"
-    }
-  ]
+  "tags": []
 }

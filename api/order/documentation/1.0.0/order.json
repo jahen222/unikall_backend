@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/subscribers": {
+    "/orders": {
       "get": {
         "deprecated": false,
-        "description": "Find all the subscribers's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve subscribers document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Subscribers"
+                    "$ref": "#/components/schemas/Order"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Subscribers"
+          "Order"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new subscribers record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve subscribers document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Subscribers"
+                  "$ref": "#/components/schemas/Order"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Subscribers"
+          "Order"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewSubscribers"
+                "$ref": "#/components/schemas/NewOrder"
               }
             }
           }
         }
       }
     },
-    "/subscribers/count": {
+    "/orders/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of subscribers documents",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve subscribers document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Subscribers"
+          "Order"
         ],
         "parameters": []
       }
     },
-    "/subscribers/{id}": {
+    "/orders/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one subscribers record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve subscribers document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Subscribers"
+                  "$ref": "#/components/schemas/Order"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Subscribers"
+          "Order"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single subscribers record",
+        "description": "Update a record",
         "responses": {
           "200": {
-            "description": "Retrieve subscribers document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Subscribers"
+                  "$ref": "#/components/schemas/Order"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Subscribers"
+          "Order"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewSubscribers"
+                "$ref": "#/components/schemas/NewOrder"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single subscribers record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single subscribers based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Subscribers"
+          "Order"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Subscribers": {
+      "Order": {
         "required": [
           "id"
         ],
@@ -522,10 +522,29 @@
           "id": {
             "type": "string"
           },
-          "subscriber_email": {
+          "contact_information": {
             "type": "string"
           },
-          "business": {
+          "name": {
+            "type": "string"
+          },
+          "shipping_address": {
+            "type": "string"
+          },
+          "total": {
+            "type": "number"
+          },
+          "subtotal": {
+            "type": "number"
+          },
+          "discount": {
+            "type": "number"
+          },
+          "paid": {
+            "type": "boolean",
+            "default": false
+          },
+          "order_item": {
             "required": [
               "id"
             ],
@@ -536,91 +555,47 @@
               "name": {
                 "type": "string"
               },
-              "logo": {
+              "product": {
                 "type": "string"
               },
-              "tagline": {
+              "order": {
                 "type": "string"
               },
-              "description": {
-                "type": "string"
-              },
-              "work_images": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "address1": {
-                "type": "string"
-              },
-              "user": {
-                "type": "string"
-              },
-              "testimonials": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "email": {
-                "type": "string"
-              },
-              "phone": {
-                "type": "string"
-              },
-              "blogs": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "address2": {
-                "type": "string"
-              },
-              "city": {
-                "type": "string"
-              },
-              "country": {
-                "type": "string"
-              },
-              "state": {
-                "type": "string"
-              },
-              "zip": {
+              "price": {
                 "type": "number"
               },
-              "business_services": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "allies": {
-                "type": "string"
-              },
-              "ally": {
-                "type": "string"
-              },
-              "products": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "top_banners": {
-                "type": "string"
+              "quantity": {
+                "type": "integer"
               }
             }
           }
         }
       },
-      "NewSubscribers": {
+      "NewOrder": {
         "properties": {
-          "subscriber_email": {
+          "contact_information": {
             "type": "string"
           },
-          "business": {
+          "name": {
+            "type": "string"
+          },
+          "shipping_address": {
+            "type": "string"
+          },
+          "total": {
+            "type": "number"
+          },
+          "subtotal": {
+            "type": "number"
+          },
+          "discount": {
+            "type": "number"
+          },
+          "paid": {
+            "type": "boolean",
+            "default": false
+          },
+          "order_item": {
             "type": "string"
           }
         }
@@ -629,7 +604,7 @@
   },
   "tags": [
     {
-      "name": "Subscribers"
+      "name": "Order"
     }
   ]
 }
