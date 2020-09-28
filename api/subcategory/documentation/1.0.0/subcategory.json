@@ -542,12 +542,49 @@
                   "type": "string"
                 }
               },
-              "icon": {
-                "type": "string"
-              },
               "layouts": {
                 "type": "array",
                 "items": {
+                  "type": "string"
+                }
+              },
+              "description": {
+                "type": "string"
+              }
+            }
+          },
+          "description": {
+            "type": "string"
+          },
+          "layouts": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "preview": {
+                  "type": "string"
+                },
+                "mockup": {
+                  "type": "string"
+                },
+                "category": {
+                  "type": "string"
+                },
+                "card": {
+                  "type": "string"
+                },
+                "free": {
+                  "type": "boolean"
+                },
+                "subcategory": {
                   "type": "string"
                 }
               }
@@ -562,6 +599,15 @@
           },
           "category": {
             "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "layouts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }

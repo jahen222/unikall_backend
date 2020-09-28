@@ -35,8 +35,26 @@
       "required": false
     },
     "category": {
-      "model": "category",
-      "via": "layouts"
+      "via": "layouts",
+      "model": "category"
+    },
+    "card": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "free": {
+      "type": "boolean"
+    },
+    "subcategory": {
+      "via": "layouts",
+      "model": "subcategory"
     }
   }
 }

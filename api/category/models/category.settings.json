@@ -13,15 +13,15 @@
       "type": "string"
     },
     "subcategories": {
-      "collection": "subcategory",
-      "via": "category"
-    },
-    "icon": {
-      "type": "string"
+      "via": "category",
+      "collection": "subcategory"
     },
     "layouts": {
-      "via": "category",
-      "collection": "layout"
+      "collection": "layout",
+      "via": "category"
+    },
+    "description": {
+      "type": "string"
     }
   }
 }

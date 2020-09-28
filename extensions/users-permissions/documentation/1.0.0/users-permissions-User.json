@@ -1434,6 +1434,15 @@
               },
               "category": {
                 "type": "string"
+              },
+              "card": {
+                "type": "string"
+              },
+              "free": {
+                "type": "boolean"
+              },
+              "subcategory": {
+                "type": "string"
               }
             }
           }

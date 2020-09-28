@@ -540,12 +540,18 @@
                 },
                 "category": {
                   "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "layouts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
-          },
-          "icon": {
-            "type": "string"
           },
           "layouts": {
             "type": "array",
@@ -568,9 +574,21 @@
                 },
                 "category": {
                   "type": "string"
+                },
+                "card": {
+                  "type": "string"
+                },
+                "free": {
+                  "type": "boolean"
+                },
+                "subcategory": {
+                  "type": "string"
                 }
               }
             }
+          },
+          "description": {
+            "type": "string"
           }
         }
       },
@@ -585,14 +603,14 @@
               "type": "string"
             }
           },
-          "icon": {
-            "type": "string"
-          },
           "layouts": {
             "type": "array",
             "items": {
               "type": "string"
             }
+          },
+          "description": {
+            "type": "string"
           }
         }
       }
