@@ -100,6 +100,16 @@
     },
     "top_banners": {
       "collection": "top-banner"
+    },
+    "latitude": {
+      "type": "float"
+    },
+    "longitude": {
+      "type": "float"
+    },
+    "galeries": {
+      "via": "business",
+      "collection": "galery"
     }
   }
 }

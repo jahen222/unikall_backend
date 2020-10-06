@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/blogs": {
+    "/galeries": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Blog"
+                    "$ref": "#/components/schemas/Galery"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Blog"
+          "Galery"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Blog"
+                  "$ref": "#/components/schemas/Galery"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Blog"
+          "Galery"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewBlog"
+                "$ref": "#/components/schemas/NewGalery"
               }
             }
           }
         }
       }
     },
-    "/blogs/count": {
+    "/galeries/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Blog"
+          "Galery"
         ],
         "parameters": []
       }
     },
-    "/blogs/{id}": {
+    "/galeries/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Blog"
+                  "$ref": "#/components/schemas/Galery"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Blog"
+          "Galery"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Blog"
+                  "$ref": "#/components/schemas/Galery"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Blog"
+          "Galery"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewBlog"
+                "$ref": "#/components/schemas/NewGalery"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Blog"
+          "Galery"
         ],
         "parameters": [
           {
@@ -514,21 +514,13 @@
   },
   "components": {
     "schemas": {
-      "Blog": {
+      "Galery": {
         "required": [
           "id"
         ],
         "properties": {
           "id": {
             "type": "string"
-          },
-          "title": {
-            "type": "string",
-            "default": "blog title"
-          },
-          "description": {
-            "type": "string",
-            "default": "blog description goes here..."
           },
           "image": {
             "required": [
@@ -693,16 +685,8 @@
           }
         }
       },
-      "NewBlog": {
+      "NewGalery": {
         "properties": {
-          "title": {
-            "type": "string",
-            "default": "blog title"
-          },
-          "description": {
-            "type": "string",
-            "default": "blog description goes here..."
-          },
           "business": {
             "type": "string"
           }
@@ -712,7 +696,7 @@
   },
   "tags": [
     {
-      "name": "Blog"
+      "name": "Galery"
     }
   ]
 }

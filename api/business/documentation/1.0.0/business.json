@@ -825,7 +825,10 @@
                   "type": "string"
                 },
                 "image": {
-                  "type": "string"
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "business": {
                   "type": "string"
@@ -929,6 +932,31 @@
                 "type": "string"
               }
             }
+          },
+          "latitude": {
+            "type": "number"
+          },
+          "longitude": {
+            "type": "number"
+          },
+          "galeries": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "string"
+                },
+                "business": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -1008,6 +1036,18 @@
           },
           "top_banners": {
             "type": "string"
+          },
+          "latitude": {
+            "type": "number"
+          },
+          "longitude": {
+            "type": "number"
+          },
+          "galeries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }
