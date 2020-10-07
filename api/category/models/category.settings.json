@@ -22,6 +22,10 @@
     },
     "description": {
       "type": "string"
+    },
+    "taglines": {
+      "via": "category",
+      "collection": "tagline"
     }
   }
 }

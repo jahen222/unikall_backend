@@ -589,6 +589,25 @@
           },
           "description": {
             "type": "string"
+          },
+          "taglines": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string"
+                },
+                "category": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -611,6 +630,12 @@
           },
           "description": {
             "type": "string"
+          },
+          "taglines": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }
