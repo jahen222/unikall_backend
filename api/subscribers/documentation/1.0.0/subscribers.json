@@ -611,7 +611,13 @@
               "top_banners": {
                 "type": "string"
               },
-              "coupons": {
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
+              },
+              "galeries": {
                 "type": "array",
                 "items": {
                   "type": "string"

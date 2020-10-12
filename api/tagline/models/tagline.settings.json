@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "taglines",
+  "info": {
+    "name": "Tagline"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "category": {
+      "model": "category",
+      "via": "taglines"
+    }
+  }
+}

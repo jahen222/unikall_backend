@@ -825,7 +825,10 @@
                   "type": "string"
                 },
                 "image": {
-                  "type": "string"
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "business": {
                   "type": "string"
@@ -930,32 +933,27 @@
               }
             }
           },
-          "coupons": {
+          "latitude": {
+            "type": "number"
+          },
+          "longitude": {
+            "type": "number"
+          },
+          "galeries": {
             "type": "array",
             "items": {
               "required": [
-                "id",
-                "code",
-                "is_fixed"
+                "id"
               ],
               "properties": {
                 "id": {
                   "type": "string"
                 },
-                "code": {
+                "image": {
                   "type": "string"
-                },
-                "discount": {
-                  "type": "number"
-                },
-                "is_fixed": {
-                  "type": "boolean"
                 },
                 "business": {
                   "type": "string"
-                },
-                "expire_on": {
-                  "type": "datetime"
                 }
               }
             }
@@ -1039,7 +1037,13 @@
           "top_banners": {
             "type": "string"
           },
-          "coupons": {
+          "latitude": {
+            "type": "number"
+          },
+          "longitude": {
+            "type": "number"
+          },
+          "galeries": {
             "type": "array",
             "items": {
               "type": "string"

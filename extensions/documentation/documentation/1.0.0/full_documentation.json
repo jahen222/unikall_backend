@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "10/04/2020 1:33:55 PM"
+    "x-generation-date": "10/07/2020 11:17:34 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3635,7 +3635,7 @@
         ]
       }
     },
-    "/coupons": {
+    "/galeries": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -3647,7 +3647,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Coupon"
+                    "$ref": "#/components/schemas/Galery"
                   }
                 }
               }
@@ -3686,7 +3686,7 @@
         },
         "summary": "",
         "tags": [
-          "Coupon"
+          "Galery"
         ],
         "parameters": [
           {
@@ -3836,7 +3836,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Coupon"
+                  "$ref": "#/components/schemas/Galery"
                 }
               }
             }
@@ -3874,7 +3874,7 @@
         },
         "summary": "",
         "tags": [
-          "Coupon"
+          "Galery"
         ],
         "requestBody": {
           "description": "",
@@ -3882,14 +3882,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCoupon"
+                "$ref": "#/components/schemas/NewGalery"
               }
             }
           }
         }
       }
     },
-    "/coupons/count": {
+    "/galeries/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -3941,12 +3941,12 @@
         },
         "summary": "",
         "tags": [
-          "Coupon"
+          "Galery"
         ],
         "parameters": []
       }
     },
-    "/coupons/{id}": {
+    "/galeries/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -3956,7 +3956,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Coupon"
+                  "$ref": "#/components/schemas/Galery"
                 }
               }
             }
@@ -3994,7 +3994,7 @@
         },
         "summary": "",
         "tags": [
-          "Coupon"
+          "Galery"
         ],
         "parameters": [
           {
@@ -4018,7 +4018,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Coupon"
+                  "$ref": "#/components/schemas/Galery"
                 }
               }
             }
@@ -4056,7 +4056,7 @@
         },
         "summary": "",
         "tags": [
-          "Coupon"
+          "Galery"
         ],
         "requestBody": {
           "description": "",
@@ -4064,7 +4064,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCoupon"
+                "$ref": "#/components/schemas/NewGalery"
               }
             }
           }
@@ -4130,7 +4130,7 @@
         },
         "summary": "",
         "tags": [
-          "Coupon"
+          "Galery"
         ],
         "parameters": [
           {
@@ -8273,6 +8273,517 @@
         ]
       }
     },
+    "/taglines": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Tagline"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Tagline"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Tagline"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Tagline"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewTagline"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/taglines/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Tagline"
+        ],
+        "parameters": []
+      }
+    },
+    "/taglines/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Tagline"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Tagline"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Tagline"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Tagline"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewTagline"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a record",
+        "responses": {
+          "200": {
+            "description": "deletes a single record based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Tagline"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
     "/testimonials": {
       "get": {
         "deprecated": false,
@@ -11624,7 +12135,13 @@
               "top_banners": {
                 "type": "string"
               },
-              "coupons": {
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
+              },
+              "galeries": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -11897,7 +12414,13 @@
               "top_banners": {
                 "type": "string"
               },
-              "coupons": {
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
+              },
+              "galeries": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -11940,63 +12463,66 @@
             "type": "string"
           },
           "image": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "hash",
+                "mime",
+                "size",
+                "url",
+                "provider"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "alternativeText": {
+                  "type": "string"
+                },
+                "caption": {
+                  "type": "string"
+                },
+                "width": {
+                  "type": "integer"
+                },
+                "height": {
+                  "type": "integer"
+                },
+                "formats": {
+                  "type": "object"
+                },
+                "hash": {
+                  "type": "string"
+                },
+                "ext": {
+                  "type": "string"
+                },
+                "mime": {
+                  "type": "string"
+                },
+                "size": {
+                  "type": "number"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "previewUrl": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "provider_metadata": {
+                  "type": "object"
+                },
+                "related": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -12086,7 +12612,13 @@
               "top_banners": {
                 "type": "string"
               },
-              "coupons": {
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
+              },
+              "galeries": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -12423,7 +12955,10 @@
                   "type": "string"
                 },
                 "image": {
-                  "type": "string"
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "business": {
                   "type": "string"
@@ -12528,32 +13063,27 @@
               }
             }
           },
-          "coupons": {
+          "latitude": {
+            "type": "number"
+          },
+          "longitude": {
+            "type": "number"
+          },
+          "galeries": {
             "type": "array",
             "items": {
               "required": [
-                "id",
-                "code",
-                "is_fixed"
+                "id"
               ],
               "properties": {
                 "id": {
                   "type": "string"
                 },
-                "code": {
+                "image": {
                   "type": "string"
-                },
-                "discount": {
-                  "type": "number"
-                },
-                "is_fixed": {
-                  "type": "boolean"
                 },
                 "business": {
                   "type": "string"
-                },
-                "expire_on": {
-                  "type": "datetime"
                 }
               }
             }
@@ -12637,7 +13167,13 @@
           "top_banners": {
             "type": "string"
           },
-          "coupons": {
+          "latitude": {
+            "type": "number"
+          },
+          "longitude": {
+            "type": "number"
+          },
+          "galeries": {
             "type": "array",
             "items": {
               "type": "string"
@@ -12720,6 +13256,25 @@
           },
           "description": {
             "type": "string"
+          },
+          "taglines": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string"
+                },
+                "category": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -12742,6 +13297,12 @@
           },
           "description": {
             "type": "string"
+          },
+          "taglines": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       },
@@ -12771,25 +13332,74 @@
           }
         }
       },
-      "Coupon": {
+      "Galery": {
         "required": [
-          "id",
-          "code",
-          "is_fixed"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "code": {
-            "type": "string"
-          },
-          "discount": {
-            "type": "number"
-          },
-          "is_fixed": {
-            "type": "boolean",
-            "default": true
+          "image": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              }
+            }
           },
           "business": {
             "required": [
@@ -12877,40 +13487,26 @@
               "top_banners": {
                 "type": "string"
               },
-              "coupons": {
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
+              },
+              "galeries": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               }
             }
-          },
-          "expire_on": {
-            "type": "datetime"
           }
         }
       },
-      "NewCoupon": {
-        "required": [
-          "code",
-          "is_fixed"
-        ],
+      "NewGalery": {
         "properties": {
-          "code": {
-            "type": "string"
-          },
-          "discount": {
-            "type": "number"
-          },
-          "is_fixed": {
-            "type": "boolean",
-            "default": true
-          },
           "business": {
             "type": "string"
-          },
-          "expire_on": {
-            "type": "datetime"
           }
         }
       },
@@ -13072,6 +13668,12 @@
               },
               "description": {
                 "type": "string"
+              },
+              "taglines": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -13695,7 +14297,13 @@
               "top_banners": {
                 "type": "string"
               },
-              "coupons": {
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
+              },
+              "galeries": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -13796,6 +14404,12 @@
               },
               "description": {
                 "type": "string"
+              },
+              "taglines": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -13954,7 +14568,13 @@
               "top_banners": {
                 "type": "string"
               },
-              "coupons": {
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
+              },
+              "galeries": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -13970,6 +14590,63 @@
             "type": "string"
           },
           "business": {
+            "type": "string"
+          }
+        }
+      },
+      "Tagline": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "category": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "subcategories": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "layouts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "description": {
+                "type": "string"
+              },
+              "taglines": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "NewTagline": {
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "category": {
             "type": "string"
           }
         }
@@ -14138,7 +14815,13 @@
               "top_banners": {
                 "type": "string"
               },
-              "coupons": {
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
+              },
+              "galeries": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -14319,7 +15002,13 @@
               "top_banners": {
                 "type": "string"
               },
-              "coupons": {
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
+              },
+              "galeries": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -14719,7 +15408,13 @@
               "top_banners": {
                 "type": "string"
               },
-              "coupons": {
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
+              },
+              "galeries": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -14868,7 +15563,7 @@
       "name": "Config"
     },
     {
-      "name": "Coupon"
+      "name": "Galery"
     },
     {
       "name": "Layout"
@@ -14884,6 +15579,9 @@
     },
     {
       "name": "Subscribers"
+    },
+    {
+      "name": "Tagline"
     },
     {
       "name": "Testimonial"

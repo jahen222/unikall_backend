@@ -101,9 +101,15 @@
     "top_banners": {
       "collection": "top-banner"
     },
-    "coupons": {
+    "latitude": {
+      "type": "float"
+    },
+    "longitude": {
+      "type": "float"
+    },
+    "galeries": {
       "via": "business",
-      "collection": "coupon"
+      "collection": "galery"
     }
   }
 }

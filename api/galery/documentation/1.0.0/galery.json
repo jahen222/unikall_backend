@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/layouts": {
+    "/galeries": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Layout"
+                    "$ref": "#/components/schemas/Galery"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Layout"
+          "Galery"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Layout"
+                  "$ref": "#/components/schemas/Galery"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Layout"
+          "Galery"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewLayout"
+                "$ref": "#/components/schemas/NewGalery"
               }
             }
           }
         }
       }
     },
-    "/layouts/count": {
+    "/galeries/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Layout"
+          "Galery"
         ],
         "parameters": []
       }
     },
-    "/layouts/{id}": {
+    "/galeries/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Layout"
+                  "$ref": "#/components/schemas/Galery"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Layout"
+          "Galery"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Layout"
+                  "$ref": "#/components/schemas/Galery"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Layout"
+          "Galery"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewLayout"
+                "$ref": "#/components/schemas/NewGalery"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Layout"
+          "Galery"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Layout": {
+      "Galery": {
         "required": [
           "id"
         ],
@@ -522,10 +522,7 @@
           "id": {
             "type": "string"
           },
-          "name": {
-            "type": "string"
-          },
-          "preview": {
+          "image": {
             "required": [
               "id",
               "name",
@@ -586,68 +583,7 @@
               }
             }
           },
-          "mockup": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              }
-            }
-          },
-          "category": {
+          "business": {
             "required": [
               "id"
             ],
@@ -658,111 +594,88 @@
               "name": {
                 "type": "string"
               },
-              "subcategories": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "logo": {
+                "type": "string"
               },
-              "layouts": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "tagline": {
+                "type": "string"
               },
               "description": {
                 "type": "string"
               },
-              "taglines": {
+              "work_images": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
-              }
-            }
-          },
-          "card": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
+              },
+              "address1": {
                 "type": "string"
               },
-              "name": {
+              "user": {
                 "type": "string"
               },
-              "alternativeText": {
+              "testimonials": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "email": {
                 "type": "string"
               },
-              "caption": {
+              "phone": {
                 "type": "string"
               },
-              "width": {
-                "type": "integer"
+              "blogs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
+              "address2": {
                 "type": "string"
               },
-              "ext": {
+              "city": {
                 "type": "string"
               },
-              "mime": {
+              "country": {
                 "type": "string"
               },
-              "size": {
+              "state": {
+                "type": "string"
+              },
+              "zip": {
                 "type": "number"
               },
-              "url": {
+              "business_services": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "allies": {
                 "type": "string"
               },
-              "previewUrl": {
+              "ally": {
                 "type": "string"
               },
-              "provider": {
+              "products": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "top_banners": {
                 "type": "string"
               },
-              "provider_metadata": {
-                "type": "object"
+              "latitude": {
+                "type": "number"
               },
-              "related": {
-                "type": "string"
-              }
-            }
-          },
-          "free": {
-            "type": "boolean"
-          },
-          "subcategory": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
+              "longitude": {
+                "type": "number"
               },
-              "name": {
-                "type": "string"
-              },
-              "category": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "layouts": {
+              "galeries": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -772,18 +685,9 @@
           }
         }
       },
-      "NewLayout": {
+      "NewGalery": {
         "properties": {
-          "name": {
-            "type": "string"
-          },
-          "category": {
-            "type": "string"
-          },
-          "free": {
-            "type": "boolean"
-          },
-          "subcategory": {
+          "business": {
             "type": "string"
           }
         }
@@ -792,7 +696,7 @@
   },
   "tags": [
     {
-      "name": "Layout"
+      "name": "Galery"
     }
   ]
 }
