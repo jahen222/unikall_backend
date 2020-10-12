@@ -1412,6 +1412,12 @@
               },
               "top_banners": {
                 "type": "string"
+              },
+              "coupons": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           },

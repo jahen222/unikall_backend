@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/subscribers": {
+    "/coupons": {
       "get": {
         "deprecated": false,
-        "description": "Find all the subscribers's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve subscribers document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Subscribers"
+                    "$ref": "#/components/schemas/Coupon"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Subscribers"
+          "Coupon"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new subscribers record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve subscribers document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Subscribers"
+                  "$ref": "#/components/schemas/Coupon"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Subscribers"
+          "Coupon"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewSubscribers"
+                "$ref": "#/components/schemas/NewCoupon"
               }
             }
           }
         }
       }
     },
-    "/subscribers/count": {
+    "/coupons/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of subscribers documents",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve subscribers document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Subscribers"
+          "Coupon"
         ],
         "parameters": []
       }
     },
-    "/subscribers/{id}": {
+    "/coupons/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one subscribers record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve subscribers document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Subscribers"
+                  "$ref": "#/components/schemas/Coupon"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Subscribers"
+          "Coupon"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single subscribers record",
+        "description": "Update a record",
         "responses": {
           "200": {
-            "description": "Retrieve subscribers document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Subscribers"
+                  "$ref": "#/components/schemas/Coupon"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Subscribers"
+          "Coupon"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewSubscribers"
+                "$ref": "#/components/schemas/NewCoupon"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single subscribers record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single subscribers based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Subscribers"
+          "Coupon"
         ],
         "parameters": [
           {
@@ -514,16 +514,25 @@
   },
   "components": {
     "schemas": {
-      "Subscribers": {
+      "Coupon": {
         "required": [
-          "id"
+          "id",
+          "code",
+          "is_fixed"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "subscriber_email": {
+          "code": {
             "type": "string"
+          },
+          "discount": {
+            "type": "number"
+          },
+          "is_fixed": {
+            "type": "boolean",
+            "default": true
           },
           "business": {
             "required": [
@@ -618,16 +627,33 @@
                 }
               }
             }
+          },
+          "expire_on": {
+            "type": "datetime"
           }
         }
       },
-      "NewSubscribers": {
+      "NewCoupon": {
+        "required": [
+          "code",
+          "is_fixed"
+        ],
         "properties": {
-          "subscriber_email": {
+          "code": {
             "type": "string"
+          },
+          "discount": {
+            "type": "number"
+          },
+          "is_fixed": {
+            "type": "boolean",
+            "default": true
           },
           "business": {
             "type": "string"
+          },
+          "expire_on": {
+            "type": "datetime"
           }
         }
       }
@@ -635,7 +661,7 @@
   },
   "tags": [
     {
-      "name": "Subscribers"
+      "name": "Coupon"
     }
   ]
 }
