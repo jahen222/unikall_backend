@@ -957,6 +957,36 @@
                 }
               }
             }
+          },
+          "coupons": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "code",
+                "is_fixed"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "discount": {
+                  "type": "number"
+                },
+                "is_fixed": {
+                  "type": "boolean"
+                },
+                "expire_on": {
+                  "type": "datetime"
+                },
+                "business": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -1044,6 +1074,12 @@
             "type": "number"
           },
           "galeries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "coupons": {
             "type": "array",
             "items": {
               "type": "string"

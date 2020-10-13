@@ -534,6 +534,9 @@
             "type": "boolean",
             "default": true
           },
+          "expire_on": {
+            "type": "datetime"
+          },
           "business": {
             "required": [
               "id"
@@ -620,6 +623,18 @@
               "top_banners": {
                 "type": "string"
               },
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
+              },
+              "galeries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "coupons": {
                 "type": "array",
                 "items": {
@@ -627,9 +642,6 @@
                 }
               }
             }
-          },
-          "expire_on": {
-            "type": "datetime"
           }
         }
       },
@@ -649,11 +661,11 @@
             "type": "boolean",
             "default": true
           },
-          "business": {
-            "type": "string"
-          },
           "expire_on": {
             "type": "datetime"
+          },
+          "business": {
+            "type": "string"
           }
         }
       }

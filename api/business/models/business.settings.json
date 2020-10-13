@@ -110,6 +110,10 @@
     "galeries": {
       "via": "business",
       "collection": "galery"
+    },
+    "coupons": {
+      "via": "business",
+      "collection": "coupon"
     }
   }
 }

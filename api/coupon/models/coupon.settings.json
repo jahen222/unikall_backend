@@ -21,12 +21,12 @@
       "default": true,
       "required": true
     },
+    "expire_on": {
+      "type": "datetime"
+    },
     "business": {
       "model": "business",
       "via": "coupons"
-    },
-    "expire_on": {
-      "type": "datetime"
     }
   }
 }
