@@ -95,8 +95,8 @@
       "via": "business"
     },
     "products": {
-      "collection": "product",
-      "via": "business"
+      "via": "business",
+      "collection": "product"
     },
     "top_banners": {
       "collection": "top-banner"

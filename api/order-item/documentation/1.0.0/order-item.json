@@ -575,6 +575,9 @@
               },
               "featured": {
                 "type": "boolean"
+              },
+              "stock": {
+                "type": "integer"
               }
             }
           },

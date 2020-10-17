@@ -596,7 +596,8 @@
             }
           },
           "quantity": {
-            "type": "integer"
+            "type": "integer",
+            "default": 1
           },
           "status": {
             "type": "boolean"
@@ -732,6 +733,10 @@
           "featured": {
             "type": "boolean",
             "default": false
+          },
+          "stock": {
+            "type": "integer",
+            "default": 1
           }
         }
       },
@@ -747,7 +752,8 @@
             "type": "number"
           },
           "quantity": {
-            "type": "integer"
+            "type": "integer",
+            "default": 1
           },
           "status": {
             "type": "boolean"
@@ -761,6 +767,10 @@
           "featured": {
             "type": "boolean",
             "default": false
+          },
+          "stock": {
+            "type": "integer",
+            "default": 1
           }
         }
       }

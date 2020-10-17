@@ -30,14 +30,15 @@
       "required": false
     },
     "quantity": {
-      "type": "integer"
+      "type": "integer",
+      "default": 1
     },
     "status": {
       "type": "boolean"
     },
     "business": {
-      "via": "products",
-      "model": "business"
+      "model": "business",
+      "via": "products"
     },
     "product_subcategory": {
       "model": "product-subcategory",
@@ -46,6 +47,10 @@
     "featured": {
       "type": "boolean",
       "default": false
+    },
+    "stock": {
+      "type": "integer",
+      "default": 1
     }
   }
 }
