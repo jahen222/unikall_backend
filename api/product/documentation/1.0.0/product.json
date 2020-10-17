@@ -516,7 +516,8 @@
     "schemas": {
       "Product": {
         "required": [
-          "id"
+          "id",
+          "stock"
         ],
         "properties": {
           "id": {
@@ -741,6 +742,9 @@
         }
       },
       "NewProduct": {
+        "required": [
+          "stock"
+        ],
         "properties": {
           "name": {
             "type": "string"

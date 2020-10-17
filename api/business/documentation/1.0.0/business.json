@@ -878,7 +878,8 @@
             "type": "array",
             "items": {
               "required": [
-                "id"
+                "id",
+                "stock"
               ],
               "properties": {
                 "id": {

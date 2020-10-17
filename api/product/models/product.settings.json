@@ -50,7 +50,8 @@
     },
     "stock": {
       "type": "integer",
-      "default": 1
+      "default": 1,
+      "required": true
     }
   }
 }

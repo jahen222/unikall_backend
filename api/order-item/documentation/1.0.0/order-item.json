@@ -540,7 +540,8 @@
           },
           "product": {
             "required": [
-              "id"
+              "id",
+              "stock"
             ],
             "properties": {
               "id": {
