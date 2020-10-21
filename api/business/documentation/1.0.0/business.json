@@ -878,7 +878,8 @@
             "type": "array",
             "items": {
               "required": [
-                "id"
+                "id",
+                "stock"
               ],
               "properties": {
                 "id": {
@@ -913,6 +914,9 @@
                 },
                 "featured": {
                   "type": "boolean"
+                },
+                "stock": {
+                  "type": "integer"
                 }
               }
             }
@@ -997,6 +1001,36 @@
                 },
                 "read": {
                   "type": "boolean"
+                }
+              }
+            }
+          },
+          "coupons": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "code",
+                "is_fixed"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "discount": {
+                  "type": "number"
+                },
+                "is_fixed": {
+                  "type": "boolean"
+                },
+                "expire_on": {
+                  "type": "datetime"
+                },
+                "business": {
+                  "type": "string"
                 }
               }
             }
@@ -1096,6 +1130,12 @@
             "type": "number"
           },
           "messages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "coupons": {
             "type": "array",
             "items": {
               "type": "string"

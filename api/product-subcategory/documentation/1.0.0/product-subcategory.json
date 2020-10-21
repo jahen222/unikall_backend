@@ -561,7 +561,8 @@
             "type": "array",
             "items": {
               "required": [
-                "id"
+                "id",
+                "stock"
               ],
               "properties": {
                 "id": {
@@ -596,6 +597,9 @@
                 },
                 "featured": {
                   "type": "boolean"
+                },
+                "stock": {
+                  "type": "integer"
                 }
               }
             }
