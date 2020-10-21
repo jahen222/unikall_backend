@@ -1413,13 +1413,22 @@
               "top_banners": {
                 "type": "string"
               },
+              "galeries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "business_position": {
+                "type": "string"
+              },
               "latitude": {
                 "type": "number"
               },
               "longitude": {
                 "type": "number"
               },
-              "galeries": {
+              "messages": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -1454,6 +1463,9 @@
                 "type": "boolean"
               },
               "subcategory": {
+                "type": "string"
+              },
+              "Flyer": {
                 "type": "string"
               }
             }

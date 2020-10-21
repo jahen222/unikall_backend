@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "messages",
+  "info": {
+    "name": "Messages"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "message": {
+      "type": "richtext"
+    },
+    "date": {
+      "type": "date"
+    },
+    "business": {
+      "model": "business",
+      "via": "messages"
+    },
+    "read": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

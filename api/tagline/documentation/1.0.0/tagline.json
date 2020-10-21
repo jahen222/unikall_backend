@@ -556,6 +556,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "predefined_blogs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           }

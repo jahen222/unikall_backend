@@ -20,8 +20,8 @@
       "type": "string"
     },
     "layouts": {
-      "collection": "layout",
-      "via": "subcategory"
+      "via": "subcategory",
+      "collection": "layout"
     }
   }
 }

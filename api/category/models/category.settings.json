@@ -17,8 +17,8 @@
       "collection": "subcategory"
     },
     "layouts": {
-      "collection": "layout",
-      "via": "category"
+      "via": "category",
+      "collection": "layout"
     },
     "description": {
       "type": "string"
@@ -26,6 +26,10 @@
     "taglines": {
       "via": "category",
       "collection": "tagline"
+    },
+    "predefined_blogs": {
+      "via": "category",
+      "collection": "predefined-blog"
     }
   }
 }

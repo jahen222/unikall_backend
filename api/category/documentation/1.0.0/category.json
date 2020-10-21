@@ -583,6 +583,9 @@
                 },
                 "subcategory": {
                   "type": "string"
+                },
+                "Flyer": {
+                  "type": "string"
                 }
               }
             }
@@ -601,6 +604,31 @@
                   "type": "string"
                 },
                 "text": {
+                  "type": "string"
+                },
+                "category": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "predefined_blogs": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "image": {
                   "type": "string"
                 },
                 "category": {
@@ -632,6 +660,12 @@
             "type": "string"
           },
           "taglines": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "predefined_blogs": {
             "type": "array",
             "items": {
               "type": "string"

@@ -101,15 +101,22 @@
     "top_banners": {
       "collection": "top-banner"
     },
+    "galeries": {
+      "collection": "galery",
+      "via": "business"
+    },
+    "business_position": {
+      "type": "string"
+    },
     "latitude": {
       "type": "float"
     },
     "longitude": {
       "type": "float"
     },
-    "galeries": {
+    "messages": {
       "via": "business",
-      "collection": "galery"
+      "collection": "messages"
     }
   }
 }

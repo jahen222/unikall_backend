@@ -35,8 +35,8 @@
       "required": false
     },
     "category": {
-      "via": "layouts",
-      "model": "category"
+      "model": "category",
+      "via": "layouts"
     },
     "card": {
       "model": "file",
@@ -53,8 +53,19 @@
       "type": "boolean"
     },
     "subcategory": {
-      "via": "layouts",
-      "model": "subcategory"
+      "model": "subcategory",
+      "via": "layouts"
+    },
+    "Flyer": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }
