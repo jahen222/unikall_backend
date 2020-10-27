@@ -590,7 +590,7 @@
               "id": {
                 "type": "string"
               },
-              "contact_information": {
+              "phone": {
                 "type": "string"
               },
               "name": {
@@ -611,7 +611,16 @@
               "paid": {
                 "type": "boolean"
               },
-              "order_item": {
+              "business": {
+                "type": "string"
+              },
+              "order_items": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "email": {
                 "type": "string"
               }
             }

@@ -121,6 +121,10 @@
     "coupons": {
       "via": "business",
       "collection": "coupon"
+    },
+    "orders": {
+      "via": "business",
+      "collection": "order"
     }
   }
 }

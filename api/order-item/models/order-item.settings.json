@@ -16,8 +16,8 @@
       "model": "product"
     },
     "order": {
-      "model": "order",
-      "via": "order_item"
+      "via": "order_items",
+      "model": "order"
     },
     "price": {
       "type": "float"

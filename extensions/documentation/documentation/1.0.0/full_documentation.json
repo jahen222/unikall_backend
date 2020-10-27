@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "10/17/2020 11:17:29 PM"
+    "x-generation-date": "10/22/2020 7:58:50 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -13707,6 +13707,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "orders": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           }
@@ -14001,6 +14007,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "orders": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           }
@@ -14210,6 +14222,12 @@
                 }
               },
               "coupons": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "orders": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -14755,6 +14773,52 @@
                 }
               }
             }
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "phone": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "shipping_address": {
+                  "type": "string"
+                },
+                "total": {
+                  "type": "number"
+                },
+                "subtotal": {
+                  "type": "number"
+                },
+                "discount": {
+                  "type": "number"
+                },
+                "paid": {
+                  "type": "boolean"
+                },
+                "business": {
+                  "type": "string"
+                },
+                "order_items": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "email": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -14857,6 +14921,12 @@
             }
           },
           "coupons": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "orders": {
             "type": "array",
             "items": {
               "type": "string"
@@ -15158,19 +15228,34 @@
               "top_banners": {
                 "type": "string"
               },
-              "latitude": {
-                "type": "number"
-              },
-              "longitude": {
-                "type": "number"
-              },
               "galeries": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
+              "business_position": {
+                "type": "string"
+              },
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
+              },
+              "messages": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "coupons": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "orders": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -15381,6 +15466,12 @@
                 }
               },
               "coupons": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "orders": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -15873,6 +15964,18 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "coupons": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "orders": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -15977,7 +16080,7 @@
               "id": {
                 "type": "string"
               },
-              "contact_information": {
+              "phone": {
                 "type": "string"
               },
               "name": {
@@ -15998,7 +16101,16 @@
               "paid": {
                 "type": "boolean"
               },
-              "order_item": {
+              "business": {
+                "type": "string"
+              },
+              "order_items": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "email": {
                 "type": "string"
               }
             }
@@ -16038,7 +16150,7 @@
           "id": {
             "type": "string"
           },
-          "contact_information": {
+          "phone": {
             "type": "string"
           },
           "name": {
@@ -16060,7 +16172,7 @@
             "type": "boolean",
             "default": false
           },
-          "order_item": {
+          "business": {
             "required": [
               "id"
             ],
@@ -16071,25 +16183,152 @@
               "name": {
                 "type": "string"
               },
-              "product": {
+              "logo": {
                 "type": "string"
               },
-              "order": {
+              "tagline": {
                 "type": "string"
               },
-              "price": {
+              "description": {
+                "type": "string"
+              },
+              "work_images": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "address1": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "testimonials": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "email": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "string"
+              },
+              "blogs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "address2": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "country": {
+                "type": "string"
+              },
+              "state": {
+                "type": "string"
+              },
+              "zip": {
                 "type": "number"
               },
-              "quantity": {
-                "type": "integer"
+              "business_services": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "allies": {
+                "type": "string"
+              },
+              "ally": {
+                "type": "string"
+              },
+              "products": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "top_banners": {
+                "type": "string"
+              },
+              "galeries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "business_position": {
+                "type": "string"
+              },
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
+              },
+              "messages": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "coupons": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "orders": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
+          },
+          "order_items": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "product": {
+                  "type": "string"
+                },
+                "order": {
+                  "type": "string"
+                },
+                "price": {
+                  "type": "number"
+                },
+                "quantity": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "email": {
+            "type": "string"
           }
         }
       },
       "NewOrder": {
         "properties": {
-          "contact_information": {
+          "phone": {
             "type": "string"
           },
           "name": {
@@ -16111,7 +16350,16 @@
             "type": "boolean",
             "default": false
           },
-          "order_item": {
+          "business": {
+            "type": "string"
+          },
+          "order_items": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "email": {
             "type": "string"
           }
         }
@@ -16593,6 +16841,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "orders": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -16900,6 +17154,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "orders": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           }
@@ -17168,6 +17428,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "orders": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           }
@@ -17366,6 +17632,12 @@
                 }
               },
               "coupons": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "orders": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -17787,6 +18059,12 @@
                 }
               },
               "coupons": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "orders": {
                 "type": "array",
                 "items": {
                   "type": "string"

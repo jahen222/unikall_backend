@@ -9,7 +9,7 @@
     "timestamps": true
   },
   "attributes": {
-    "contact_information": {
+    "phone": {
       "type": "string"
     },
     "name": {
@@ -31,9 +31,16 @@
       "type": "boolean",
       "default": false
     },
-    "order_item": {
-      "via": "order",
-      "model": "order-item"
+    "business": {
+      "model": "business",
+      "via": "orders"
+    },
+    "order_items": {
+      "collection": "order-item",
+      "via": "order"
+    },
+    "email": {
+      "type": "email"
     }
   }
 }
